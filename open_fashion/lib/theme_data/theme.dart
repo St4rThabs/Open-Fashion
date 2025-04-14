@@ -1,24 +1,43 @@
 import 'package:flutter/material.dart';
 
-class ThemeLight {
-  static ThemeData get() {
+class ThemeApp {
+
+  static ThemeData getLight() {
     return ThemeData(
-        colorScheme: colorSchemeLight,
-      );
+      fontFamily: 'TenorSans',
+      colorScheme: colorSchemeLight
+    );
+  }
+
+  static ThemeData getDark() {
+    return ThemeData(colorScheme: colorSchemeDark);
   }
 
   static final colorSchemeLight = ColorScheme(
-        brightness: Brightness.light,
-        primary: Color(0xFF1C1C1C),      
-        onPrimary: Colors.white,         
-        secondary: Color(0xFFF5F5DC),     
-        onSecondary: Color(0xFF1C1C1C),   
-        background: Color(0xFFFAFAFA),    
-        onBackground: Color(0xFF2E2E2E),  
-        surface: Colors.white,            
-        onSurface: Color(0xFF2E2E2E),    
-        error: Color(0xFF8B0000),         
-        onError: Colors.white,            
-      );
-}
+    brightness: Brightness.light,
+    primary: Color.fromARGB(255, 0, 0, 0),
+    onPrimary: const Color.fromARGB(255, 255, 255, 255),
+    secondary: Color(0xFFF5F5DC),
+    onSecondary: Color(0xFF1C1C1C),
+    background: Color(0xFFFAFAFA),
+    onBackground: Color(0xFF2E2E2E),
+    surface: Colors.white,
+    onSurface: Color(0xFF2E2E2E),
+    error: Color.fromARGB(255, 255, 0, 0),
+    onError: Colors.white,
+  );
 
+  static final colorSchemeDark = ColorScheme(
+    brightness: Brightness.dark,
+    primary: const Color.fromARGB(255, 255, 255, 255), 
+    onPrimary: const Color.fromARGB(255, 0, 0, 0),
+    secondary: const Color.fromARGB(255, 255, 255, 255), 
+    onSecondary: const Color.fromARGB(255, 0, 0, 0), 
+    background: const Color.fromARGB(255, 0, 0, 0), 
+    onBackground: const Color(0xFFFAFAFA), 
+    surface: const Color(0xFF1C1C1C),
+    onSurface: const Color.fromARGB(255, 255, 255, 255), 
+    error: const Color.fromARGB(255,255,100,100,), 
+    onError: const Color.fromARGB(255, 255, 255, 255), 
+  );
+}
