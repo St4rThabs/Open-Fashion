@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 class BottomNav extends StatefulWidget {
   @override
   State<BottomNav> createState() => BottomNavState();
