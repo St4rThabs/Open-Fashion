@@ -9,14 +9,14 @@ class ThemeLight {
 
   static final colorSchemeLight = ColorScheme(
         brightness: Brightness.light,
-        primary: Color(0xFF1C1C1C),      
+        primary: Color.fromRGBO(28, 28, 28, 1),      
         onPrimary: Colors.white,         
         secondary: Color(0xFFF5F5DC),     
         onSecondary: Color(0xFF1C1C1C),  
         surface: Colors.white,            
         onSurface: Color(0xFF2E2E2E),    
         error: Color(0xFF8B0000),         
-        onError: Colors.white,            
+        onError: Colors.white,
       );
 }
 

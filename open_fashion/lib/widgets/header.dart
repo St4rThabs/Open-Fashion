@@ -6,6 +6,7 @@ class Header extends StatelessWidget implements PreferredSizeWidget{
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      backgroundColor: Color.fromARGB(255, 231, 234, 239),
       leading: Builder(
         builder: (BuildContext context) {
           return IconButton(
@@ -17,6 +18,15 @@ class Header extends StatelessWidget implements PreferredSizeWidget{
           );
         },
       ),
+      centerTitle: true,
+      title: Image.asset('header/Logo.png'),
+      actions: [
+        IconButton(
+        icon: Image.asset('header/Search.png'),
+        onPressed: () =>{
+
+        }, )
+      ],
     );
   }
   
