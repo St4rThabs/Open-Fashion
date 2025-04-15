@@ -10,7 +10,7 @@ class Header extends StatelessWidget implements PreferredSizeWidget{
       leading: Builder(
         builder: (BuildContext context) {
           return IconButton(
-            icon: Image.asset('header/Menu.png'),
+            icon: Image.asset('assets/Menu.png'),
             onPressed: () {
               Scaffold.of(context).openDrawer();
             },
@@ -19,10 +19,10 @@ class Header extends StatelessWidget implements PreferredSizeWidget{
         },
       ),
       centerTitle: true,
-      title: Image.asset('header/Logo.png'),
+      title: Image.asset('assets/Logo.png'),
       actions: [
         IconButton(
-        icon: Image.asset('header/Search.png'),
+        icon: Image.asset('assets/Search.png'),
         onPressed: () =>{
 
         }, )
