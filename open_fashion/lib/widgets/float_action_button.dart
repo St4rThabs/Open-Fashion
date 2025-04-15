@@ -7,13 +7,14 @@ class FloatButton extends StatelessWidget {
   @override
   FloatingActionButton build(BuildContext context) {
     return FloatingActionButton(
+      shape: CircleBorder(),
       onPressed: () => {
         Navigator.push(
           context, 
           MaterialPageRoute(builder: (context) => CartPage())
         )
       },
-      child: Icon(Icons.add_shopping_cart),);
+      child: Image.asset('assets/Shopping bag.png'),);
   }
 
 }

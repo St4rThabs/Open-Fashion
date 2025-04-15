@@ -49,7 +49,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: Header(),
+      appBar: Header(index: _selectedIndex,),
       body: mainPages[_selectedIndex],
       floatingActionButton: FloatButton(),
       bottomNavigationBar: BottomNav(
