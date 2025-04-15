@@ -3,6 +3,7 @@ import 'package:open_fashion/models/item.dart';
 import 'package:open_fashion/widgets/cart_item.dart';
 
 class CartPage extends StatefulWidget {
+  const CartPage({super.key});
   @override
   State<StatefulWidget> createState() {
     return _CartPageState();

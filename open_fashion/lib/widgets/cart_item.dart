@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:open_fashion/models/item.dart';
 
+// ignore: must_be_immutable
 class CartItem extends StatelessWidget {
   Item item;
   TextStyle titleStyle = TextStyle(fontSize: 26, fontWeight: FontWeight.bold);
 
-  CartItem({required this.item});
+  CartItem({super.key, required this.item});
 
   @override
   Widget build(BuildContext context) {

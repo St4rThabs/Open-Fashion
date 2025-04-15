@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:open_fashion/theme_data/theme.dart';
 import 'package:open_fashion/widgets/header.dart';
 import 'package:open_fashion/widgets/float_action_button.dart';
-import 'widgets/bottom_navigator.dart';
+import 'package:open_fashion/widgets/bottom_navigator.dart';
 
 void main() {
   runApp(const MyApp());

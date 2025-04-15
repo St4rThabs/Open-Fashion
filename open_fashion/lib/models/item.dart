@@ -16,8 +16,8 @@ class Item {
     required this.colors, 
     required this.sizes});
 
-  String getImagePath() => this.imagePath; 
-  String getTitle() => this.title; 
-  String getSubtitle() => this.subTitle; 
-  double getPrice() => this.price; 
+  String getImagePath() => imagePath; 
+  String getTitle() => title; 
+  String getSubtitle() => subTitle; 
+  double getPrice() => price; 
 }

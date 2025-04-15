@@ -28,15 +28,11 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-<<<<<<< HEAD
-  - assets/
-=======
-    - icons/house.png
+    - assets/
   
   fonts:
     - family: TenorSans
       fonts:
         - asset: fonts/TenorSans-Regular.ttf
->>>>>>> caique/page6
 
 
