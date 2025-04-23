@@ -5,7 +5,7 @@ import 'package:open_fashion/widgets/float_action_button.dart';
 import 'package:open_fashion/widgets/bottom_navigator.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const MyApp()); 
 }
 
 class MyApp extends StatelessWidget {
