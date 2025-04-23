@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class ThemeApp {
-
   static ThemeData getLight() {
     return ThemeData(
       fontFamily: 'TenorSans',
