@@ -3,6 +3,7 @@ import 'package:open_fashion/theme_data/theme.dart';
 import 'package:open_fashion/widgets/header.dart';
 import 'package:open_fashion/widgets/float_action_button.dart';
 import 'package:open_fashion/widgets/bottom_navigator.dart';
+import 'package:open_fashion/pages/home_page.dart';
 
 void main() {
   runApp(const MyApp()); 
@@ -17,21 +18,21 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeApp.getLight(),
-      home: HomePage(),
+      home: Main(),
     );
   }
 }
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class Main extends StatefulWidget {
+  const Main({super.key});
 
   @override
   State<StatefulWidget> createState() {
-    return _HomePageState();
+    return _MainState();
   }
 }
 
-class _HomePageState extends State<HomePage> {
+class _MainState extends State<Main> {
   int _selectedIndex = 0;
 
   //index = index button clicked by the user
@@ -42,7 +43,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   List mainPages = <Widget>[
-    Text("Página principal que a thabs ta desenvolvendo"),
+    HomePage(),
     Text("Página de perfil"),
   ];
 
