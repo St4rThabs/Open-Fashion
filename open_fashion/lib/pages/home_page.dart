@@ -20,7 +20,6 @@ class _HomePage extends State<HomePage> {
           return SingleChildScrollView(
             child: Stack(
               children: [
-                // Imagem
                 Image.asset(
                   'assets/Banner.png',
                   width: screenWidth,
