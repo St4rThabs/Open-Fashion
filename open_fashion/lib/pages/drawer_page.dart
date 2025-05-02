@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:open_fashion/pages/grid_view_page.dart';
+import 'package:open_fashion/main.dart';
+
 
 class DrawerWidget extends StatefulWidget {
   @override
@@ -46,123 +47,139 @@ class _DrawerWidgetState extends State<DrawerWidget> {
               ),
             ],
           ),
-          SizedBox(
-            height: 60,
-            child: Row(
-              children: [
-                TextButton(
-                  onPressed:
-                      () => {
-                        setState(() {
-                          _indexMenu = 0;
-                        }),
-                      },
-                  child: const Text("WOMEN"),
-                ),
-                TextButton(
-                  onPressed:
-                      () => {
-                        setState(() {
-                          _indexMenu = 1;
-                        }),
-                      },
-                  child: const Text("MEN"),
-                ),
-                TextButton(
-                  onPressed:
-                      () => {
-                        setState(() {
-                          _indexMenu = 2;
-                        }),
-                      },
-                  child: const Text("KIDS"),
-                ),
-              ],
-            ),
-          ),
-          SizedBox(
-            height: 360,
-            child: Column(
-              children: [
-                ...itensList[_indexMenu].map(
-                  (item) => ListTile(
-                    contentPadding: EdgeInsets.all(0),
-                    title: Row(
-                      children: [
-                        TextButton(
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder:
-                                    (context) =>
-                                        GridViewPage(category: item["id"]),
-                              ),
-                            );
-                          },
-                          child: Text(item['name']),
-                        ),
-                      ],
-                    ),
-                  ),
-                ), //... para distribuir os itens na children
-              ],
-            ),
-          ),
-          SizedBox(
-            height: 120,
-            child: Column(
-              children: [
-                Row(
-                  children: [
-                    IconButton(
-                      onPressed: () => {},
-                      icon: Image.asset('assets/Call.png'),
-                    ),
-                    Text(phoneNumber),
-                  ],
-                ),
-                Row(
-                  children: [
-                    IconButton(
-                      onPressed: () => {},
-                      icon: Image.asset('assets/Location.png'),
-                    ),
-                    Text("Store Location"),
-                  ],
-                ),
-              ],
-            ),
-          ),
-          SizedBox(
-            child: Column(
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [Image.asset('assets/Divider.png')],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    IconButton(
-                      onPressed: () => {print("Social")},
-                      icon: Image.asset('assets/Twitter.png'),
-                    ),
-                    IconButton(
-                      onPressed: () => {print("Social")},
-                      icon: Image.asset('assets/Instagram.png'),
-                    ),
-                    IconButton(
-                      onPressed: () => {print("Social")},
-                      icon: Image.asset('assets/Youtube.png'),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ),
+          gender(), //Generos (woman, man, kids)
+          categories(context), //Categorias de roupas
+          contact(), //Contato e localização
+          social(), //Redes sociais
         ],
       ),
     );
+  }
+
+  SizedBox contact() {
+    return SizedBox(
+          height: 120,
+          child: Column(
+            children: [
+              Row(
+                children: [
+                  IconButton(
+                    onPressed: () => {},
+                    icon: Image.asset('assets/Call.png'),
+                  ),
+                  Text(phoneNumber),
+                ],
+              ),
+              Row(
+                children: [
+                  IconButton(
+                    onPressed: () => {},
+                    icon: Image.asset('assets/Location.png'),
+                  ),
+                  Text("Store Location"),
+                ],
+              ),
+            ],
+          ),
+        );
+  }
+
+  SizedBox categories(BuildContext context) {
+    return SizedBox(
+          height: 360,
+          child: Column(
+            children: [
+              ...itensList[_indexMenu].map(
+                (item) => ListTile(
+                  contentPadding: EdgeInsets.all(0),
+                  title: Row(
+                    children: [
+                      TextButton(
+                        onPressed: () {
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                              builder:
+                                  (context) =>
+                                      Main(categoryGrid: item['id']),
+                            ),
+                          );
+                        },
+                        child: Text(item['name']),
+                      ),
+                    ],
+                  ),
+                ),
+              ), //... para distribuir os itens na children
+            ],
+          ),
+        );
+  }
+
+  SizedBox gender() {
+    return SizedBox(
+          height: 60,
+          child: Row(
+            children: [
+              TextButton(
+                onPressed:
+                    () => {
+                      setState(() {
+                        _indexMenu = 0;
+                      }),
+                    },
+                child: const Text("WOMEN"),
+              ),
+              TextButton(
+                onPressed:
+                    () => {
+                      setState(() {
+                        _indexMenu = 1;
+                      }),
+                    },
+                child: const Text("MEN"),
+              ),
+              TextButton(
+                onPressed:
+                    () => {
+                      setState(() {
+                        _indexMenu = 2;
+                      }),
+                    },
+                child: const Text("KIDS"),
+              ),
+            ],
+          ),
+        );
+  }
+
+  SizedBox social() {
+    return SizedBox(
+          child: Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [Image.asset('assets/Divider.png')],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  IconButton(
+                    onPressed: () => {print("Social")},
+                    icon: Image.asset('assets/Twitter.png'),
+                  ),
+                  IconButton(
+                    onPressed: () => {print("Social")},
+                    icon: Image.asset('assets/Instagram.png'),
+                  ),
+                  IconButton(
+                    onPressed: () => {print("Social")},
+                    icon: Image.asset('assets/Youtube.png'),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        );
   }
 }

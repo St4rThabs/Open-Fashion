@@ -12,7 +12,9 @@ class BottomNav extends StatelessWidget {
       currentIndex: currentIndex,
       items: [
         BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-        BottomNavigationBarItem(icon: Icon(Icons.account_box), label: "Meus dados")],
+        BottomNavigationBarItem(icon: Icon(Icons.grid_view), label: "Store"),
+        BottomNavigationBarItem(icon: Icon(Icons.account_box), label: "Meus dados"),
+      ],
       onTap: onItemTapped,
     );
   }
