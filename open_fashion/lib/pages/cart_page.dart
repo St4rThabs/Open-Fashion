@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:open_fashion/models/item.dart';
-import 'package:open_fashion/widgets/cart_item.dart';
+import 'package:open_fashion/widgets/cart_item_widget.dart';
 
 class CartPage extends StatefulWidget {
   const CartPage({super.key});

@@ -34,7 +34,6 @@ class Header extends StatelessWidget implements PreferredSizeWidget{
         IconButton(
         icon: Image.asset('assets/Search.png'),
         onPressed: () =>{
-
         }, )
       ],
     );

@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:open_fashion/theme_data/theme.dart';
-import 'package:open_fashion/widgets/header.dart';
-import 'package:open_fashion/widgets/float_action_button.dart';
-import 'package:open_fashion/widgets/bottom_navigator.dart';
+import 'package:open_fashion/theme_data/theme_settings.dart';
+import 'package:open_fashion/pages/drawer_page.dart';
+import 'package:open_fashion/widgets/header_widget.dart';
+import 'package:open_fashion/widgets/float_action_button_widget.dart';
+import 'package:open_fashion/widgets/bottom_navigator_widget.dart';
 import 'package:open_fashion/pages/home_page.dart';
 
 void main() {
-  runApp(const MyApp()); 
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -15,10 +16,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Open Fashion',
       debugShowCheckedModeBanner: false,
       theme: ThemeApp.getLight(),
-      home: Main(),
+      home: const Main(),
     );
   }
 }
@@ -27,32 +28,29 @@ class Main extends StatefulWidget {
   const Main({super.key});
 
   @override
-  State<StatefulWidget> createState() {
-    return _MainState();
-  }
+  State<Main> createState() => _MainState();
 }
 
 class _MainState extends State<Main> {
-  int _selectedIndex = 0;
+  late int _selectedIndex = 0;
 
-  //index = index button clicked by the user
+  List<Widget> mainPages = [
+      const HomePage(),
+      const Center(child: Text("Página de perfil")),
+  ];
+
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
     });
   }
-
-  List mainPages = <Widget>[
-    HomePage(),
-    Text("Página de perfil"),
-  ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: Header(index: _selectedIndex,),
+      drawer: DrawerWidget(),
+      appBar: Header(index: _selectedIndex),
       body: mainPages[_selectedIndex],
-      floatingActionButton: FloatButton(),
+      floatingActionButton: const FloatButton(),
       bottomNavigationBar: BottomNav(
         currentIndex: _selectedIndex,
         onItemTapped: _onItemTapped,
