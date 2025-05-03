@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:open_fashion/models/item.dart';
 
+
 // ignore: must_be_immutable
 class CartItem extends StatefulWidget {
-  Item item;
+  final Item item;
   int amount;
   
   CartItem({super.key, required this.item, required this.amount});

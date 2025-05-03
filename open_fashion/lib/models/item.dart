@@ -1,14 +1,14 @@
-import 'package:flutter/material.dart';
-
 class Item {
+  final int? id;
   final String imagePath;
   final String title;
   final String subTitle;
   final double price;
-  final List<Color> colors;
+  final List<String> colors;
   final List<String> sizes;
 
   Item({
+    this.id, 
     required this.imagePath, 
     required this.title, 
     required this.subTitle, 

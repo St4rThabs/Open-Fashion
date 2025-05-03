@@ -18,7 +18,7 @@ class _CartPageState extends State<CartPage> {
         title: "Blusa Canelada Feminina",
         subTitle: "Blusa de malha canelada, ideal para dias amenos",
         price: 89.9,
-        colors: [Colors.black],
+        colors: ["black"],
         sizes: ['M'],
       ),
       amount: 1,
@@ -29,7 +29,7 @@ class _CartPageState extends State<CartPage> {
         title: "Casaco Moletom Oversized",
         subTitle: "Casaco de moletom sem capuz",
         price: 159.99,
-        colors: [Colors.black],
+        colors: ["black"],
         sizes: ['M'],
       ),
       amount: 2,
@@ -95,7 +95,6 @@ class BottomBar extends StatelessWidget {
           padding: EdgeInsets.all(20),
           child: Column(
             children: [
-          
               Container(
                 decoration: BoxDecoration(
                   border: Border(top: BorderSide(color: Colors.grey)),
