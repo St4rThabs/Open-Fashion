@@ -86,7 +86,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
 
   SizedBox categories(BuildContext context) {
     return SizedBox(
-          height: 360,
+          height: 400,
           child: Column(
             children: [
               ...itensList[_indexMenu].map(
@@ -118,7 +118,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
 
   SizedBox gender() {
     return SizedBox(
-          height: 60,
+          height: 50,
           child: Row(
             children: [
               TextButton(
@@ -174,7 +174,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                   ),
                   IconButton(
                     onPressed: () => {print("Social")},
-                    icon: Image.asset('assets/Youtube.png'),
+                    icon: Image.asset('assets/yt.png'),
                   ),
                 ],
               ),

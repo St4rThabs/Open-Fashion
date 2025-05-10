@@ -30,7 +30,7 @@ class _CartItemState extends State<CartItem> {
           Container(
             alignment: Alignment.topCenter,
             margin: EdgeInsets.only(right: 12),
-            child: Image.network(widget.item.imagePath),
+            child: Image.asset(widget.item.imagePath),
           ),
           SizedBox(
             width: 200,

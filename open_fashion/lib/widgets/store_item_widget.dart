@@ -22,7 +22,7 @@ class _StoreItemWidgetState extends State<StoreItemWidget> {
       onTap: widget.onPressed, //Executa a função passada
       child: Column(
             children: [
-              Image.network(
+              Image.asset(
                 width: double.infinity,
                 widget.item.getImagePath()
               ),
