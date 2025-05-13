@@ -65,7 +65,14 @@ class _MainState extends State<Main> {
     return Scaffold(
       drawer: DrawerWidget(),
       appBar: Header(index: _selectedIndex),
-      body: mainPages[_selectedIndex],
+      body: Stack(
+        children: [
+          mainPages[_selectedIndex],
+          Align(
+            alignment: Alignment.bottomCenter,
+          ),
+        ],
+      ),
       floatingActionButton: const FloatButton(),
       bottomNavigationBar: BottomNav(
         currentIndex: _selectedIndex,
