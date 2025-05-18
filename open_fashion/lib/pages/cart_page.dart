@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:open_fashion/models/item.dart';
+import 'package:open_fashion/pages/payment_method_page.dart';
 import 'package:open_fashion/widgets/cart_item_widget.dart';
 
 class CartPage extends StatefulWidget {
@@ -129,9 +130,20 @@ class BottomBar extends StatelessWidget {
           width: double.infinity,
           color: Colors.black,
           child: TextButton.icon(
-            onPressed: () => {print(getTotalPrice())},
+            onPressed:
+                () => {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => PaymentMethodPage(),
+                    ),
+                  ),
+                },
             icon: Image.asset('assets/Shopping bag.png'),
-            label: Text("Buy Now".toUpperCase(), style: TextStyle(color: Colors.white)),
+            label: Text(
+              "Buy Now".toUpperCase(),
+              style: TextStyle(color: Colors.white),
+            ),
           ),
         ),
       ],

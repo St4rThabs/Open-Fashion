@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:open_fashion/models/item.dart';
 
 class StoreItemWidget extends StatefulWidget{

@@ -46,10 +46,10 @@ class _MainState extends State<Main> {
         categoryId != null ? 1 : 0; //Define o valor inicial de _selectedIndex
   }
 
-  //Executa quano o usuario clica em um botao do bottom nav
+  //Executa quando o usuario clica em um botao do bottom nav
   void _onItemTapped(int index) {
     setState(() {
-      if(index == 1) {categoryId = 0;};
+      if(index == 1) {categoryId = 0;}
       _selectedIndex = index;
     });
   }
