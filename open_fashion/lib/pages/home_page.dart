@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:open_fashion/main.dart';
+import 'package:open_fashion/pages/main_page.dart';
 import 'package:open_fashion/widgets/footer_widget.dart';
 
 class HomePage extends StatefulWidget {
